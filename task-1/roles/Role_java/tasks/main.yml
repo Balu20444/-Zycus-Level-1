@@ -1,0 +1,12 @@
+---
+# Installs Oracle JDK 7 and related packages
+
+- include: install.yml
+  tags:
+    - INSTALL
+    - INSTALL_PACKAGES
+
+- include: configure.yml
+  tags:
+    - CONFIGURE
+    - CONFIGURE_PACKAGE

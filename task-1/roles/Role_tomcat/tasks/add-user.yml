@@ -1,0 +1,12 @@
+---
+# Create a non-privileged user for tomcat
+
+- name: ensure group for managing tomcat exists
+  group:
+     name=tomcat
+    state=present
+
+- name: ensure non-privileged user exists for tomcat
+  user: name=tomcat group=tomcat shell=/bin/nologin createhome=no comment='non-privileged user for tomcat'
+  become: True
+  become_method: sudo

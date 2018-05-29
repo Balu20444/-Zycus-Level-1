@@ -1,0 +1,22 @@
+---
+# Installs and configures Tomcat 8
+
+- include: install.yml
+  tags:
+    - INSTALL
+    - INSTALL_BINARIES
+
+- include: add-user.yml
+  tags:
+    - CONFIGURE
+    - CONFIGURE_USERS
+
+- include: configure-tomcat.yml
+  tags:
+    - CONFIGURE
+    - CONFIGURE_BINARIES
+
+- include: configure-firewall.yml
+  tags:
+    - CONFIGURE
+    - CONFIGURE_FIREWALL

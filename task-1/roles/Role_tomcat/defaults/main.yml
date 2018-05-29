@@ -1,0 +1,12 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+
+# specific variables
+tomcat8_barc_role_name: tomcat8
+tomcat8_barc_role_version: 0.1.0
+
+# tomcat8 specific variables
+tomcat8_binary_download_url: http://mirror.vorboss.net/apache/tomcat/tomcat-8/v8.0.52/bin/apache-tomcat-8.0.52.tar.gz
+tomcat8_binary_checksum_sha256: 9835093a219c307c90a722518c98dc125ec3546d921cc4420601b8a2fe6f0109
+
+tomcat8_firewall_port_http: 8080

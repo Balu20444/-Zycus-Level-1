@@ -1,0 +1,7 @@
+---
+# Deploy war in to tomcat webapps
+- name: Make sure that we can connect to the machine
+  ping:
+
+- name: copy war
+  copy: src=./osm-phs-1.0.6.war dest=/opt/tomcat/webapps/osm-phs-1.0.6.war owner=tomcat group=tomcat mode=0744

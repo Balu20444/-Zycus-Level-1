@@ -1,0 +1,25 @@
+---
+# Handlers for tomcat 8
+
+- name: Reload Systemd Daemon - CentOS
+  command: systemctl daemon-reload
+
+- name: Start Tomcat
+  service:
+    name=tomcat8
+    state=started
+
+- name: Restart Tomcat
+  service:
+    name=tomcat8
+    state=restarted
+
+- name: Restart Nginx
+  service:
+     name=nginx
+    state=restarted
+
+- name: Restart Firewall - CentOS
+  service:
+     name=firewalld
+    state=restarted

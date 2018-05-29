@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - Role_java
+    - ROle_tomcat
+    - Role_web_deploy
